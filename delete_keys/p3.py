@@ -11,11 +11,13 @@ keys = ["name", "salary"]
 
 # {'city': 'New york', 'age': 25}
 
+# Here Popping the key value pair from the dictionary
 def met1():
     for i in keys:
         sample_dict.pop(i)
     print(sample_dict)
 
+# Here deleting the key value pair from the dictionary
 def met2():
     for i in keys:
         del sample_dict[i]

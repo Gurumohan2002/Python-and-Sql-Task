@@ -5,12 +5,16 @@ def write_file():
         L = ["Hi Everyone\n", "Hi I am Guru \n", "I am from Trichy\n","I watch movies and webseries\n"]
         file.writelines(L)
 
+# check() function gets details for checking and tofind for matching the matches in it 
+# Here the string are case insensitive So converting them to lower() easily matches the strings in it.
 def check(details, tofind):
     return tofind.lower() in details.lower()
 
+# word_count() gives the count of each word from the file
 def word_count(details):
     word_count = {}
     words = details.split()
+    # print(words)
     for word in words:
         word = word.strip('.,!?()[]{}:;"\'').lower()
         if word:
@@ -18,6 +22,9 @@ def word_count(details):
     # print(word_count)
     return word_count
 
+
+# Reading the file and checking for the matches given by the user and
+# printing the word count in it.
 def read_file():
     with open("readme.txt", "r") as file:
         details = file.read()
@@ -32,4 +39,4 @@ def read_file():
         print(word_counts)
 
 write_file()
-# read_file()
+read_file()
